@@ -1,4 +1,3 @@
-import axios from "axios";
 
 export const DeletePokemon =  async (pokemon) => {
     console.log('Got body_delete:', pokemon.name, pokemon._id, pokemon.type1);
@@ -10,6 +9,5 @@ export const DeletePokemon =  async (pokemon) => {
     axios.delete(url,{id,name,type1,type2})
     .then(response => console.log(response.status))
     .catch(err => console.warn(err));
-
 }
 

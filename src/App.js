@@ -1,5 +1,4 @@
 import './App.css';
-//import Button from 'react-bootstrap/Button';
 import Pokedex from "./Pages/pokedex";
 import ListingPokemon from "./Pages/listingPokemon";
 import ManagePokemon from "./Pages/managePokemon";
