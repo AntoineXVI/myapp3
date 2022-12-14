@@ -8,7 +8,7 @@ export const RenamePokemon = async (pokemon, newname) => {
                 'Content-Type':'application/json'
             },
             body:JSON.stringify({
-                'pokemontoupdate':pokemon.name,
+                'pokemontoupdate':pokemon,
                 'name':document.getElementById(newname).value
             })
         }
