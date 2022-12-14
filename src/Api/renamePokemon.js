@@ -1,5 +1,4 @@
 export const RenamePokemon = async (pokemon, newname) => {
-    console.log('Got body_update:', pokemon.name, newname);
     const response = await fetch(
         'http://localhost:4444/pokemon/update', {
             method: 'POST', 
@@ -8,11 +7,11 @@ export const RenamePokemon = async (pokemon, newname) => {
                 'Content-Type':'application/json'
             },
             body:JSON.stringify({
-                'pokemontoupdate':pokemon,
+                'pokemontoupdate':pokemon.name,
                 'name':document.getElementById(newname).value
             })
         }
     )
-    const pokemons = await response.json()
-    return pokemons
+    const pokemonsUpdate = await response.json()
+    return pokemonsUpdate
 }

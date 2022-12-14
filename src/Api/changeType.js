@@ -1,5 +1,4 @@
 export const TypePokemon = async (pokemon, newtype) => {
-    console.log('Got body_update:', pokemon.name, newtype);
     const response = await fetch(
         'http://localhost:4444/pokemon/update', {
             method: 'POST', 
@@ -13,12 +12,11 @@ export const TypePokemon = async (pokemon, newtype) => {
             })
         }
     )
-    const pokemons = await response.json()
-    return pokemons
+    const pokemonsUpdate = await response.json()
+    return pokemonsUpdate
 }
 
 export const TypePokemon2 = async (pokemon, newtype) => {
-    console.log('Got body_update:', pokemon.name, newtype);
     const response = await fetch(
         'http://localhost:4444/pokemon/update', {
             method: 'POST', 
@@ -32,6 +30,6 @@ export const TypePokemon2 = async (pokemon, newtype) => {
             })
         }
     )
-    const pokemons = await response.json()
-    return pokemons
+    const pokemonsUpdate = await response.json()
+    return pokemonsUpdate
 }

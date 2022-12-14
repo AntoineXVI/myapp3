@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AddToPokedex } from "../Api/addToPokedex";
 import { GetAll } from "../Api/pokemon";
+import { CreateToPokemon } from "../Api/createToPokemon";
 
 
 function ListingPokemon(props){

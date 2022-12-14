@@ -1,24 +1,18 @@
-import axios from "axios";
-
-export const CreateToPokemon =  async (pokemon) => {
-    console.log('Got body_insert:', pokemon.name, pokemon._id, pokemon.type);
-    const url = 'http://localhost:4444/pokemon/insert';
-    let name = pokemon.name
-    let type1 = pokemon.type1
-    let type2 = pokemon.type2
-    axios.post(url,{name,type1,type2})
-    .then(response => console.log(response.status))
-    .catch(err => console.warn(err));
+export const CreateToPokemon = async (newname) => {
+    const response = await fetch(
+        'http://localhost:4444/pokemon/insert', {
+            method: 'POST', 
+            headers: {
+                'Accept': 'application/json', 
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({
+                'name':document.getElementById(newname).value,
+                'type1':document.getElementById(newtype1).value,
+                'type2':document.getElementById(newtype2).value
+            })
+        }
+    )
+    const pokemonsUpdate = await response.json()
+    return pokemonsUpdate
 }
-
-
-{/* <form onSubmit={handleSubmit(onSubmit)}>
-                        <input {...register("firstName")} placeholder="First name" />
-                        <select {...register("category", { required: true })}>
-                            <option value="">Select...</option>
-                            <option value="A">Option A</option>
-                            <option value="B">Option B</option>
-                        </select>
-                        <textarea {...register("aboutYou")} placeholder="About you" />
-                        <button type="submit" onClick={()=>CreateToPokemon(pokemon)}>Creer !</button>
-                    </form> */}
