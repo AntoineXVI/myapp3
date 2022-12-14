@@ -1,3 +1,4 @@
+//voir la liste des pokemons
 export const GetAll = async () => {
     const response = await fetch(
         'http://localhost:4444/pokemon/list', {

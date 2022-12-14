@@ -1,3 +1,4 @@
+// changer les types des pokemons
 export const TypePokemon = async (pokemon, newtype) => {
     const response = await fetch(
         'http://localhost:4444/pokemon/update', {

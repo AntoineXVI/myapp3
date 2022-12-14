@@ -41,8 +41,9 @@ function ManagePokemon(){
                 <h3>{pokemon.type2}</h3>
                 <select {...register("category", { required: true })}>
                     <option value="">Select...</option>
-                    <option value="A">Option A</option>
-                    <option value="B">Option B</option>
+                    <option value="A">Pas de type</option>
+                    <option value="B">Option A</option>
+                    <option value="C">Option B</option>
                 </select>
                 <button onClick={()=>{TypePokemon2(pokemon, key); setCount(count+1);}}>Changer le 2nd type  de {pokemon.name} !</button>
                 <button onClick={()=>{DeletePokemon(pokemon); setCount(count+1);}}>Supprimer !</button>

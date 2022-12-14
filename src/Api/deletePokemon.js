@@ -1,3 +1,4 @@
+//supprimer un pokemon de la liste
 export const DeletePokemon =  async (pokemon) => {
     console.log('Got body_delete:', pokemon.name, pokemon._id);
     const response = await fetch(

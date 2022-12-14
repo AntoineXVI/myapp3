@@ -1,3 +1,4 @@
+//voir le pokedex
 export const GetAll = async () => {
     const response = await fetch(
         'http://localhost:4444/pokedex/list', {

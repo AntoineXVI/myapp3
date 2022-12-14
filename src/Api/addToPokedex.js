@@ -1,3 +1,4 @@
+// inserer les pokemon de la liste dans le pokedex
 import axios from "axios";
 
 export const AddToPokedex =  async (pokemon) => {

@@ -1,3 +1,4 @@
+//modifier le nom des pokemons de la liste
 export const RenamePokemon = async (pokemon, newname) => {
     const response = await fetch(
         'http://localhost:4444/pokemon/update', {
